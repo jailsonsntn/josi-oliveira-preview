@@ -15,6 +15,22 @@
 }
 
 html{scroll-behavior:smooth}
+
+/* Scrollbar escura */
+*{
+  scrollbar-width:thin;
+  scrollbar-color:#5a5448 #0b0b0b;
+}
+
+*::-webkit-scrollbar{width:12px;height:12px}
+*::-webkit-scrollbar-track{background:#0b0b0b}
+*::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,#6c6557 0%,#4f493e 100%);
+  border-radius:10px;
+  border:2px solid #0b0b0b;
+}
+*::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#867c69 0%,#5f5648 100%)}
+
 body{
   font-family:'Outfit',sans-serif;
   background:var(--white);
@@ -704,14 +720,26 @@ footer{
 
 /* â”€â”€â”€ MOBILE â”€â”€â”€ */
 @media(max-width:900px){
-  nav{margin:8px 12px 0;padding:11px 14px}
-  nav.scrolled{margin:8px 12px 0;padding:9px 14px}
+  nav{margin:8px 10px 0;padding:10px 12px;border-radius:12px}
+  nav.scrolled{margin:8px 10px 0;padding:9px 12px}
+  .nav-logo{font-size:18px}
+  .nav-cta{padding:9px 14px;font-size:10px!important;letter-spacing:0.07em}
   .nav-links{display:none}
   .hero{height:auto;min-height:auto;max-height:none;grid-template-columns:1fr;padding-top:0}
-  .hero-left{padding:84px 24px 44px;order:2}
-  .hero-right{order:1;height:52vw;min-height:250px}
+  .hero-left{padding:72px 20px 36px;order:2}
+  .hero-right{order:1;height:64vw;min-height:280px}
+  .hero-h1{font-size:clamp(44px,10vw,58px)}
+  .hero-h1-sub{font-size:clamp(24px,6.8vw,34px);margin-bottom:26px}
+  .hero-desc{font-size:15px;line-height:1.65;margin-bottom:28px}
+  .hero-actions{width:100%;gap:10px}
+  .hero-actions .btn-primary{width:100%;justify-content:center;padding:14px 22px}
+  .hero-actions .btn-ghost{width:100%;justify-content:center}
+  .hero-stat-item{padding:14px 8px}
+  .hero-stat-num{font-size:26px}
+  .hero-stat-label{font-size:9px;letter-spacing:0.08em}
   .hero-stat-bar{grid-template-columns:repeat(3,1fr)}
-  .strip{padding:16px 24px;gap:32px;overflow-x:auto;justify-content:flex-start}
+  .strip{padding:14px 18px;gap:22px;overflow-x:auto;justify-content:flex-start}
+  .strip-item{font-size:11px}
   .problema{grid-template-columns:1fr}
   .problema-left{padding:60px 24px;min-height:300px}
   .problema-img-wrap{max-width:100%;aspect-ratio:4/3}
